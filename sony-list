@@ -13,13 +13,7 @@ device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master
 device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master
 device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master
 
-device/sony/yoshino-common https://github.com/sonyxperiadev/device-sony-yoshino master
-device/sony/lilac https://github.com/sonyxperiadev/device-sony-lilac master
-device/sony/maple https://github.com/sonyxperiadev/device-sony-maple master
-device/sony/poplar https://github.com/sonyxperiadev/device-sony-poplar master
-
-hardware/qcom/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1
-
+hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master
 hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location o-mr1
