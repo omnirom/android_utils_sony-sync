@@ -1,0 +1,66 @@
+#!/bin/bash
+#
+# Copyright (C) 2018 Choose-a Project
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+echo -e "Enter the username"
+read username
+
+path=$(pwd);
+config="sony-list";
+url="review.choose-a.name";
+port="29418";
+
+# Reading config file
+while read line; do
+    # skip commented lines
+    case "$line" in \#*) continue ;; esac
+
+    parameters=3;
+    project=$(echo ${line} | awk -F\  '{print $1}');
+    remote=$(echo ${line} | awk -F\  '{print $2}');
+    branch=$(echo ${line} | awk -F\  '{print $3}');
+
+    validator=3;
+    if [ "${project}" == "" ] ; then ((validator--)); fi;
+    if [ "${remote}" == "" ] ; then ((validator--)); fi;
+    if [ "${branch}" == "" ] ; then ((validator--)); fi;
+
+    if [ $validator == $parameters ] ; then
+        echo "===============================================================";
+        echo "PROJECT: $project";
+        echo "===============================================================";
+
+        cd $path;
+        rm -fr $project;
+        mkdir -p $project;
+
+        echo "repo sync --force-sync -d -c $project";
+        ret=$(repo sync --force-sync -d -c $project 2>&1);
+
+        cd $project;
+
+        echo "";
+        echo "git pull $remote $branch";
+        git pull $remote $branch;
+
+        gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
+        echo "";
+        echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.0";
+        git push ${force} --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.0;
+
+        echo "";
+    fi
+
+done < ${config}
