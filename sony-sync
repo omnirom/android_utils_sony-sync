@@ -51,15 +51,20 @@ while read line; do
 
         cd $project;
 
-        echo "";
-        echo "git pull $remote $branch";
-        git pull $remote $branch;
+        makefiles=$(ls -1 *.mk 2>/dev/null | wc -l);
 
-        gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
-        echo "";
-        echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1";
-        git push ${force} --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1;
+        if [ $makefiles != 0 ] ; then
+            echo "";
+            echo "git pull $remote $branch";
+            git pull $remote $branch;
 
+            gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
+            echo "";
+            echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1";
+            git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1;
+        else
+            echo "Warning: This project is not present in manifests it seems."
+        fi
         echo "";
     fi
 
