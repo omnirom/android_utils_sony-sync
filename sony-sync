@@ -21,6 +21,7 @@ path=$(pwd);
 config="sony-list";
 url="review.choose-a.name";
 port="29418";
+revision="choose-8.1";
 
 # Reading config file
 while read line; do
@@ -60,8 +61,8 @@ while read line; do
 
             gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
             echo "";
-            echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1";
-            git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1;
+            echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/${revision}";
+            git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/${revision};
         else
             echo "Warning: This project is not present in manifests it seems."
         fi
