@@ -1,24 +1,24 @@
 # android_path remote_url branch
 
-device/sony/common https://github.com/sonyxperiadev/device-sony-common android-8.0.0_r30
-device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers o-mr0
-device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy o-mr0
+device/sony/common https://github.com/sonyxperiadev/device-sony-common master
+device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers aosp/LA.UM.6.4.r1
+device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy master
 
-device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire o-mr0
-device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo o-mr0
-device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu o-mr0
+device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire master
+device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo master
+device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master
 
-device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone o-mr0
-device/sony/dora https://github.com/sonyxperiadev/device-sony-dora o-mr0
-device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura o-mr0
-device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki o-mr0
+device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master
+device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master
+device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master
+device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master
 
-device/sony/yoshino-common https://github.com/sonyxperiadev/device-sony-yoshino o-mr0
-device/sony/lilac https://github.com/sonyxperiadev/device-sony-lilac o-mr0
-device/sony/maple https://github.com/sonyxperiadev/device-sony-maple o-mr0
-device/sony/poplar https://github.com/sonyxperiadev/device-sony-poplar o-mr0
+device/sony/yoshino-common https://github.com/sonyxperiadev/device-sony-yoshino master
+device/sony/lilac https://github.com/sonyxperiadev/device-sony-lilac master
+device/sony/maple https://github.com/sonyxperiadev/device-sony-maple master
+device/sony/poplar https://github.com/sonyxperiadev/device-sony-poplar master
 
-hardware/qcom/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.5.7.r1
+hardware/qcom/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1
 
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master
@@ -27,6 +27,6 @@ hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master
 hardware/sony/thermanager https://github.com/sonyxperiadev/thermanager master
 hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master
 
-kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LA.UM.5.7.r1
+kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LA.UM.6.4.r1
 
 packages/apps/ExtendedSettings https://github.com/sonyxperiadev/packages_apps_ExtendedSettings master

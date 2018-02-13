@@ -57,8 +57,8 @@ while read line; do
 
         gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
         echo "";
-        echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.0";
-        git push ${force} --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.0;
+        echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1";
+        git push ${force} --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/choose-8.1;
 
         echo "";
     fi
