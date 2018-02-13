@@ -64,6 +64,7 @@ while read line; do
             echo "git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/${revision}";
             git push --no-thin ssh://${username}@${url}:${port}/choose-a/${gerrit_project} HEAD:refs/heads/${revision};
         else
+            rm -fr $project;
             echo "Warning: This project is not present in manifests it seems."
         fi
         echo "";
