@@ -39,6 +39,19 @@ while read line; do
     if [ "${branch}" == "" ] ; then ((validator--)); fi;
 
     if [ $validator == $parameters ] ; then
+
+        # Check filter
+        if [ -z "$1" ]; then
+            filtered=0;
+        else
+            filtered=1;
+            if !(echo ${project} | grep ${1} > /dev/null) ; then
+                continue;
+            else
+                ((found++));
+            fi
+        fi
+
         echo "===============================================================";
         echo "PROJECT: $project";
         echo "===============================================================";
@@ -81,3 +94,9 @@ while read line; do
     fi
 
 done < ${config}
+
+if [ $filtered == 1 ] ; then
+    if [ $found == 0 ] ; then
+        echo "Project not found!";
+    fi
+fi
