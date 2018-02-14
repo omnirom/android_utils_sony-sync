@@ -55,14 +55,23 @@ while read line; do
         makefiles=$(ls -1 *.mk 2>/dev/null | wc -l);
 
         if [ $makefiles != 0 ] ; then
+            push_gerrit=1;
+            unset ret;
             echo "";
             echo "git pull $remote $branch";
-            git pull $remote $branch;
+            ret=$(git pull $remote $branch 2>&1);
 
-            gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
-            echo "";
-            echo "git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision}";
-            git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision};
+            case "$ret" in  
+                *"Already up-to-date"*) push_gerrit=0; echo "Repo already up-to-date!";; 
+                *"CONFLICT"*) push_gerrit=0; echo "WARNING: Merge conflict!";; 
+            esac
+
+            if [ $push_gerrit == 1 ] ; then
+                gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
+                echo "";
+                echo "git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision}";
+                git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision};
+            fi
         else
             cd $path;
             rm -fr $project;
