@@ -14,8 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-echo -e "Enter the username"
-read username
+
+# Gerrit Username
+if [ -z "$GERRIT_USERNAME" ]; then
+    echo -e "Enter the gerrit username";
+    read username;
+else
+    echo "Gerrit Username: ${GERRIT_USERNAME}";
+    username=${GERRIT_USERNAME};
+fi
 
 path=$(pwd);
 config="sony-list";
