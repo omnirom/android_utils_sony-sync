@@ -15,20 +15,18 @@
 # limitations under the License.
 #
 
-# Gerrit Username
-if [ -z "$GERRIT_USERNAME" ]; then
-    echo -e "Enter the gerrit username";
-    read username;
-else
-    echo "Gerrit Username: ${GERRIT_USERNAME}";
-    username=${GERRIT_USERNAME};
-fi
-
 path=$(pwd);
 config="sony-list";
 url="gerrit.omnirom.org"
 port="29418"
 revision="android-8.1";
+username=${GERRIT_USERNAME};
+
+# Gerrit Username
+if [ -z "$username" ]; then
+    echo -e "Enter the gerrit username";
+    read username;
+fi
 
 # Reading config file
 while read line; do
@@ -40,7 +38,7 @@ while read line; do
     remote=$(echo ${line} | awk -F\  '{print $2}');
     branch=$(echo ${line} | awk -F\  '{print $3}');
 
-    validator=3;
+    validator=${parameters};
     if [ "${project}" == "" ] ; then ((validator--)); fi;
     if [ "${remote}" == "" ] ; then ((validator--)); fi;
     if [ "${branch}" == "" ] ; then ((validator--)); fi;
