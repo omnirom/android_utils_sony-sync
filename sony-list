@@ -1,26 +1,29 @@
 # android_path remote_url branch
 
-device/sony/common https://github.com/sonyxperiadev/device-sony-common master
-device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers aosp/LA.UM.6.4.r1
-device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy master
+device/sony/common https://github.com/sonyxperiadev/device-sony-common master android_device_sony_common
+device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers aosp/LE.UM.2.3.2.r1.4 android_device_sony_common-headers
+device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy master android_device_sony_sepolicy
 
-device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire master
-device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo master
-device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master
+# Loire
+device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire master android_device_sony_loire-common
+device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo master android_device_sony_kugo
+device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master android_device_sony_suzu
 
-device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master
-device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master
-device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master
-device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master
+# Tone
+# device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master android_device_sony_tone-common
+# device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master android_device_sony_dora
+# device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master android_device_sony_kagura
+# device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master android_device_sony_keyaki
 
-hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1
-hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master
-hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master
-hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location o-mr1
-hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master
-hardware/sony/thermanager https://github.com/sonyxperiadev/thermanager master
-hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master
+hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1 android_hardware_sony_camera
+hardware/sony/cash https://github.com/sonyxperiadev/vendor-sony-oss-cash master android_hardware_sony_cash
+hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master android_hardware_sony_dataservices
+hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.6.3.r1 android_hardware_sony_display
+hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master android_hardware_sony_fingerprint
+hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location o-mr1 android_hardware_sony_location
+hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master android_hardware_sony_macaddrsetup
+hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master android_hardware_sony_timekeep
 
-kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LA.UM.6.4.r1
+kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm
 
-packages/apps/ExtendedSettings https://github.com/sonyxperiadev/packages_apps_ExtendedSettings master
+packages/apps/ExtendedSettings https://github.com/sonyxperiadev/packages_apps_ExtendedSettings master android_packages_apps_ExtendedSettings

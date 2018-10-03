@@ -16,10 +16,10 @@
 #
 
 path=$(pwd);
-config="sony-list";
+config="${path}/utils/sony-sync/sony-list";
 url="gerrit.omnirom.org"
 port="29418"
-revision="android-8.1";
+revision="android-9.0";
 username=${GERRIT_USERNAME};
 
 # Gerrit Username
@@ -33,15 +33,17 @@ while read line; do
     # skip commented lines
     case "$line" in \#*) continue ;; esac
 
-    parameters=3;
+    parameters=4;
     project=$(echo ${line} | awk -F\  '{print $1}');
     remote=$(echo ${line} | awk -F\  '{print $2}');
     branch=$(echo ${line} | awk -F\  '{print $3}');
+    gerrit=$(echo ${line} | awk -F\  '{print $4}');
 
     validator=${parameters};
     if [ "${project}" == "" ] ; then ((validator--)); fi;
     if [ "${remote}" == "" ] ; then ((validator--)); fi;
     if [ "${branch}" == "" ] ; then ((validator--)); fi;
+    if [ "${gerrit}" == "" ] ; then ((validator--)); fi;
 
     if [ $validator == $parameters ] ; then
 
@@ -63,16 +65,12 @@ while read line; do
 
         cd $path;
         rm -fr $project;
-        mkdir -p $project;
-
         echo "repo sync --force-sync -d -c $project";
-        ret=$(repo sync --force-sync -d -c $project 2>&1);
-
-        cd $project;
-
-        makefiles=$(ls -1 *.mk 2>/dev/null | wc -l);
+        ret=$(repo sync -f --force-sync -d -c $project 2>&1);
+        makefiles=$(ls -1 ${project} 2>/dev/null | wc -l);
 
         if [ $makefiles != 0 ] ; then
+            cd $project;
             push_gerrit=1;
             unset ret;
             echo "";
@@ -85,10 +83,9 @@ while read line; do
             esac
 
             if [ $push_gerrit == 1 ] ; then
-                gerrit_project=$(echo android_${project} | sed -e 's/\//\_/g');
                 echo "";
-                echo "git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision}";
-                git push --no-thin ssh://${username}@${url}:${port}/${gerrit_project} HEAD:refs/heads/${revision};
+                echo "git push --no-thin ssh://${username}@${url}:${port}/${gerrit} HEAD:refs/heads/${revision}";
+                git push --no-thin ssh://${username}@${url}:${port}/${gerrit} HEAD:refs/heads/${revision};
             fi
         else
             cd $path;
