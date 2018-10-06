@@ -18,10 +18,10 @@ device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master androi
 hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1 android_hardware_sony_camera
 hardware/sony/cash https://github.com/sonyxperiadev/vendor-sony-oss-cash master android_hardware_sony_cash
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master android_hardware_sony_dataservices
-hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio android-9.0.0_r10 android_hardware_sony_audio
+hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio aosp android_hardware_sony_audio
 hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.6.3.r1 android_hardware_sony_display
-hardware/sony/gps https://android.googlesource.com/platform/hardware/qcom/gps android-9.0.0_r10 android_hardware_sony_gps
-hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media android-9.0.0_r10 android_hardware_sony_media
+hardware/sony/gps https://android.googlesource.com/platform/hardware/qcom/gps aosp android_hardware_sony_gps
+hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media aosp android_hardware_sony_media
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master android_hardware_sony_fingerprint
 hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location o-mr1 android_hardware_sony_location
 hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master android_hardware_sony_macaddrsetup

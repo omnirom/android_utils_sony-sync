@@ -21,11 +21,22 @@ url="gerrit.omnirom.org"
 port="29418"
 revision="android-9.0";
 username=${GERRIT_USERNAME};
+aosp_rev=$(
+    cat android/default.xml | \
+    grep "default revision" | \
+    awk -F\/  '{print $3}'  | \
+    sed -e 's/"//g');
 
 # Gerrit Username
 if [ -z "$username" ]; then
     echo -e "Enter the gerrit username";
     read username;
+fi
+
+# Check location
+if [ ! -f ${config} ]; then
+    echo "ERROR: This script should be called from Android root folder";
+    exit 1;
 fi
 
 # Reading config file
@@ -44,6 +55,11 @@ while read line; do
     if [ "${remote}" == "" ] ; then ((validator--)); fi;
     if [ "${branch}" == "" ] ; then ((validator--)); fi;
     if [ "${gerrit}" == "" ] ; then ((validator--)); fi;
+
+    # Fetch current aosp revision
+    if [ "${branch}" == "aosp" ] ; then
+        branch=$aosp_rev;
+    fi
 
     if [ $validator == $parameters ] ; then
 
