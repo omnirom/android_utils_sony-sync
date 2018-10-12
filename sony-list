@@ -28,5 +28,6 @@ hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master 
 hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master android_hardware_sony_timekeep
 
 kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm
+kernel/sony/msm/arch/arm64/configs/sony https://github.com/sonyxperiadev/kernel-defconfig aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm-defconfig
 
 packages/apps/ExtendedSettings https://github.com/sonyxperiadev/packages_apps_ExtendedSettings master android_packages_apps_ExtendedSettings
