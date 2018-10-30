@@ -23,7 +23,7 @@ hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aos
 hardware/sony/gps https://android.googlesource.com/platform/hardware/qcom/gps aosp android_hardware_sony_gps
 hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media aosp android_hardware_sony_media
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master android_hardware_sony_fingerprint
-hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location o-mr1 android_hardware_sony_location
+hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location p-mr0 android_hardware_sony_location
 hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master android_hardware_sony_macaddrsetup
 hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master android_hardware_sony_timekeep
 
