@@ -10,16 +10,18 @@ device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo master androi
 device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master android_device_sony_suzu
 
 # Tone
-# device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master android_device_sony_tone-common
+device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master android_device_sony_tone-common
 # device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master android_device_sony_dora
-# device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master android_device_sony_kagura
+device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master android_device_sony_kagura
 # device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master android_device_sony_keyaki
 
 hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1 android_hardware_sony_camera
 hardware/sony/cash https://github.com/sonyxperiadev/vendor-sony-oss-cash master android_hardware_sony_cash
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master android_hardware_sony_dataservices
 hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio aosp android_hardware_sony_audio
+hardware/sony/bootctrl https://android.googlesource.com/platform/hardware/qcom/bootctrl aosp android_hardware_sony_bootctrl
 hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.6.3.r1 android_hardware_sony_display
+hardware/sony/display-sde https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.7.3.r1 android_hardware_sony_display-sde
 hardware/sony/gps https://github.com/sonyxperiadev/hardware-qcom-gps-sdm845 aosp/android-9.0.0_r11 android_hardware_sony_gps
 hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media aosp android_hardware_sony_media
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master android_hardware_sony_fingerprint
