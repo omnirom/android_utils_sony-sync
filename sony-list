@@ -1,5 +1,12 @@
-# android_path remote_url branch
+# Parameters
+#
+#    1. Local Android path
+#    2. Upstream URL (remote)
+#    3. Upstream branch name (remote)
+#    4. Local Android project name
+#
 
+# Device common
 device/sony/common https://github.com/sonyxperiadev/device-sony-common master android_device_sony_common
 device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers aosp/LE.UM.2.3.2.r1.4 android_device_sony_common-headers
 device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy master android_device_sony_sepolicy
@@ -11,25 +18,39 @@ device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master androi
 
 # Tone
 device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master android_device_sony_tone-common
-# device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master android_device_sony_dora
+device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master android_device_sony_dora
 device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master android_device_sony_kagura
-# device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master android_device_sony_keyaki
+device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master android_device_sony_keyaki
 
+# Tama
+device/sony/tama-common https://github.com/sonyxperiadev/device-sony-tama master android_device_sony_tama-common
+device/sony/akari https://github.com/sonyxperiadev/device-sony-akari master android_device_sony_akari
+device/sony/akatsuki https://github.com/sonyxperiadev/device-sony-akatsuki master android_device_sony_akatsuki
+device/sony/apollo https://github.com/sonyxperiadev/device-sony-apollo master android_device_sony_apollo
+
+# Hardware Sony
+hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio aosp android_hardware_sony_audio
+hardware/sony/bootctrl https://android.googlesource.com/platform/hardware/qcom/bootctrl aosp android_hardware_sony_bootctrl
 hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1 android_hardware_sony_camera
 hardware/sony/cash https://github.com/sonyxperiadev/vendor-sony-oss-cash master android_hardware_sony_cash
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master android_hardware_sony_dataservices
-hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio aosp android_hardware_sony_audio
-hardware/sony/bootctrl https://android.googlesource.com/platform/hardware/qcom/bootctrl aosp android_hardware_sony_bootctrl
 hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.6.3.r1 android_hardware_sony_display
 hardware/sony/display-sde https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.7.3.r1 android_hardware_sony_display-sde
 hardware/sony/gps https://github.com/sonyxperiadev/hardware-qcom-gps-sdm845 aosp/android-9.0.0_r11 android_hardware_sony_gps
 hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media aosp android_hardware_sony_media
+hardware/sony/media/sdm845 https://android.googlesource.com/platform/hardware/qcom/sdm845/media aosp android_hardware_sony_sdm845_media
 hardware/sony/fingerprint https://github.com/sonyxperiadev/vendor-sony-oss-fingerprint master android_hardware_sony_fingerprint
 hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-location p-mr0 android_hardware_sony_location
 hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master android_hardware_sony_macaddrsetup
+hardware/sony/qcrilam https://github.com/sonyxperiadev/QcRilAm master android_hardware_sony_qcrilam
 hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master android_hardware_sony_timekeep
 
+# Kernel
 kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm
 kernel/sony/msm/arch/arm64/configs/sony https://github.com/sonyxperiadev/kernel-defconfig aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm-defconfig
+kernel/sony/msm/drivers/staging/wlan-qc/fw-api https://github.com/sonyxperiadev/vendor-qcom-opensource-wlan-fw-api aosp/LA.UM.7.3.r1 android_kernel_sony_msm-wlan-fw-api
+kernel/sony/msm/drivers/staging/wlan-qc/qca-wifi-host-cmn https://github.com/sonyxperiadev/vendor-qcom-opensource-wlan-qca-wifi-host-cmn aosp/LA.UM.7.3.r1 android_kernel_sony_msm-wlan-qca-wifi-host-cmn
+kernel/sony/msm/drivers/staging/wlan-qc/qcacld-3.0 https://github.com/sonyxperiadev/vendor-qcom-opensource-wlan-qcacld-3.0 aosp/LA.UM.7.3.r1 android_kernel_sony_msm-wlan-qcacld-3.0
 
+# Apps
 packages/apps/ExtendedSettings https://github.com/sonyxperiadev/packages_apps_ExtendedSettings master android_packages_apps_ExtendedSettings
