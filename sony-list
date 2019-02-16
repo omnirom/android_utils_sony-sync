@@ -45,6 +45,7 @@ hardware/sony/location https://github.com/sonyxperiadev/vendor-qcom-opensource-l
 hardware/sony/macaddrsetup https://github.com/sonyxperiadev/macaddrsetup master android_hardware_sony_macaddrsetup
 hardware/sony/qcrilam https://github.com/sonyxperiadev/QcRilAm master android_hardware_sony_qcrilam
 hardware/sony/timekeep https://github.com/sonyxperiadev/timekeep master android_hardware_sony_timekeep
+hardware/sony/transpower https://github.com/sonyxperiadev/transpower master android_hardware_sony_transpower
 
 # Kernel
 kernel/sony/msm https://github.com/sonyxperiadev/kernel aosp/LE.UM.2.3.2.r1.4 android_kernel_sony_msm
