@@ -35,7 +35,6 @@ hardware/sony/bluetooth https://github.com/sonyxperiadev/vendor-qcom-opensource-
 hardware/sony/camera https://github.com/sonyxperiadev/camera aosp/LA.UM.6.4.r1 android_hardware_sony_camera
 hardware/sony/cash https://github.com/sonyxperiadev/vendor-sony-oss-cash master android_hardware_sony_cash
 hardware/sony/dataservices https://github.com/sonyxperiadev/vendor-qcom-opensource-dataservices master android_hardware_sony_dataservices
-hardware/sony/display https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.6.3.r1 android_hardware_sony_display
 hardware/sony/display-sde https://github.com/sonyxperiadev/hardware-qcom-display aosp/LA.UM.7.3.r1 android_hardware_sony_display-sde
 hardware/sony/gps https://github.com/sonyxperiadev/hardware-qcom-gps-sdm845 aosp/android-9.0.0_r11 android_hardware_sony_gps
 hardware/sony/media https://android.googlesource.com/platform/hardware/qcom/media aosp android_hardware_sony_media
