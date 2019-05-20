@@ -7,26 +7,26 @@
 #
 
 # Device common
-device/sony/common https://github.com/sonyxperiadev/device-sony-common master android_device_sony_common
+device/sony/common https://github.com/sonyxperiadev/device-sony-common p-mr1 android_device_sony_common
 device/sony/common-headers https://github.com/sonyxperiadev/device-sony-common-headers aosp/LE.UM.2.3.2.r1.4 android_device_sony_common-headers
-device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy master android_device_sony_sepolicy
+device/sony/sepolicy https://github.com/sonyxperiadev/device-sony-sepolicy p-mr1 android_device_sony_sepolicy
 
 # Loire
-device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire master android_device_sony_loire-common
-device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo master android_device_sony_kugo
-device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu master android_device_sony_suzu
+device/sony/loire-common https://github.com/sonyxperiadev/device-sony-loire p-mr1 android_device_sony_loire-common
+device/sony/kugo https://github.com/sonyxperiadev/device-sony-kugo p-mr1 android_device_sony_kugo
+device/sony/suzu https://github.com/sonyxperiadev/device-sony-suzu p-mr1 android_device_sony_suzu
 
 # Tone
-device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone master android_device_sony_tone-common
-device/sony/dora https://github.com/sonyxperiadev/device-sony-dora master android_device_sony_dora
-device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura master android_device_sony_kagura
-device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki master android_device_sony_keyaki
+device/sony/tone-common https://github.com/sonyxperiadev/device-sony-tone p-mr1 android_device_sony_tone-common
+device/sony/dora https://github.com/sonyxperiadev/device-sony-dora p-mr1 android_device_sony_dora
+device/sony/kagura https://github.com/sonyxperiadev/device-sony-kagura p-mr1 android_device_sony_kagura
+device/sony/keyaki https://github.com/sonyxperiadev/device-sony-keyaki p-mr1 android_device_sony_keyaki
 
 # Tama
-device/sony/tama-common https://github.com/sonyxperiadev/device-sony-tama master android_device_sony_tama-common
-device/sony/akari https://github.com/sonyxperiadev/device-sony-akari master android_device_sony_akari
-device/sony/akatsuki https://github.com/sonyxperiadev/device-sony-akatsuki master android_device_sony_akatsuki
-device/sony/apollo https://github.com/sonyxperiadev/device-sony-apollo master android_device_sony_apollo
+device/sony/tama-common https://github.com/sonyxperiadev/device-sony-tama p-mr1 android_device_sony_tama-common
+device/sony/akari https://github.com/sonyxperiadev/device-sony-akari p-mr1 android_device_sony_akari
+device/sony/akatsuki https://github.com/sonyxperiadev/device-sony-akatsuki p-mr1 android_device_sony_akatsuki
+device/sony/apollo https://github.com/sonyxperiadev/device-sony-apollo p-mr1 android_device_sony_apollo
 
 # Hardware Sony
 hardware/sony/audio https://android.googlesource.com/platform/hardware/qcom/audio aosp android_hardware_sony_audio
